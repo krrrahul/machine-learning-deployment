@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, median_absolute_error
 
-df = pd.read_csv('../data/end-part2_df.csv').set_index('date')
+df = pd.read_csv('../../data/end-part2_df.csv').set_index('date')
 
 predictors = ['meantempm_1',  'meantempm_2',  'meantempm_3',
               'mintempm_1',   'mintempm_2',   'mintempm_3',
