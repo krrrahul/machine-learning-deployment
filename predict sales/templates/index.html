@@ -13,16 +13,21 @@
 
 <body style="background: #000;">
  <div class="login">
-	<h1>Sales Forecasting</h1>
+	<h2>Forecasting</h2>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="rate" placeholder="rate" required="required" />
-        <input type="text" name="sales in first month" placeholder="sales in first month" required="required" />
-		<input type="text" name="sales in second month" placeholder="sales in second month" required="required" />
+    	<input type="text" name="mintempm_1" placeholder="t - 1  " required="required" />
+        <input type="text" name="mintempm_2 " placeholder="t - 2 " required="required" />
+		<input type="text" name="mintempm_3 " placeholder="t - 3 " required="required" />
+        <input type="text" name="maxdewptm_1" placeholder="t - 1 " required="required" />
+        <input type="text" name="maxdewptm_3 " placeholder=" t - 3 " required="required" />
+		<input type="text" name="maxdewptm_3 " placeholder="t - 3 " required="required" />
+        <input type="text" name="mindewptm_1" placeholder="t - 1" required="required" />
+        <input type="text" name="maxtempm_1 " placeholder="t - 1" required="required" />
 
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict sales in third month</button>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict </button>
     </form>
 
    <br>
@@ -30,7 +35,6 @@
    {{ prediction_text }}
 
  </div>
-
 
 </body>
 </html>
